@@ -3,6 +3,10 @@
 
 
 
+
+
+
+
 while  True :
 
     try :
@@ -36,8 +40,12 @@ while  True :
             print(resultado)
 
         while resposta not in ('s', 'n'):
+
             resposta = input('Deseja fazer uma nova conta,[S]im ou [N]ao ? ').lower()
-            print('Resposta incorreta, digite apenas (Sim) ou (Nao) ')
+            if resposta not in ('s','n'):
+                print('Resposta incorreta, digite apenas (Sim) ou (Nao) ')
+            else:
+                continue
 
         if resposta.startswith('s'):
             print('OK,Vamos nessa ')
@@ -48,6 +56,9 @@ while  True :
 
     except ValueError :
         print('Digite apenas numeros válidos !!')
+
+
+
 
 
 
